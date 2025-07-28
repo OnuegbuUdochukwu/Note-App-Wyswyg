@@ -4,45 +4,53 @@ import styled from 'styled-components';
 import RichTextEditor from '../components/RichTextEditor';
 
 const Container = styled.div`
-  max-width: 500px;
+  max-width: 800px;
   margin: 40px auto;
-  padding: 24px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(66, 184, 224, 0.10);
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px var(--shadow-color);
 `;
 const Title = styled.h1`
   text-align: center;
-  color: #2b5561;
+  color: var(--primary-dark);
+  margin-bottom: 24px;
 `;
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 `;
 const Input = styled.input`
-  padding: 10px;
+  padding: 12px 16px;
   border-radius: 8px;
-  border: 1.5px solid #acccc4;
+  border: 1.5px solid var(--border-color);
   font-size: 1.1rem;
+  transition: border-color 0.2s;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
 `;
 const Textarea = styled.textarea`
   padding: 10px;
   border-radius: 8px;
-  border: 1.5px solid #acccc4;
+  border: 1.5px solid var(--border-color);
   font-size: 1.1rem;
   min-height: 80px;
 `;
 const Button = styled.button`
-  background: #42b8e0;
-  color: #fff;
+  background: var(--primary);
+  color: var(--light-text);
   border: none;
   border-radius: 8px;
-  padding: 10px 0;
+  padding: 12px 0;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  &:hover { background: #2b5561; }
+  transition: all 0.2s;
+  &:hover { background: var(--primary-dark); }
 `;
 
 export default function AddNotePage() {
@@ -88,9 +96,21 @@ export default function AddNotePage() {
           onChange={value => setContent(value)}
         />
         <Button type="submit" disabled={loading}>{loading ? 'Adding...' : 'Add Note'}</Button>
-        {error && <div style={{ color: 'red' }}>{error}</div>}
+        {error && <div style={{ color: 'var(--secondary)' }}>{error}</div>}
       </Form>
-      <Button style={{ marginTop: 16, background: '#acccc4', color: '#2b5561' }} type="button" onClick={() => navigate('/')}>Back</Button>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: 20 }}>
+        <Button 
+          style={{ 
+            width: '200px', 
+            background: 'var(--light-bg)', 
+            color: 'var(--dark-text)' 
+          }} 
+          type="button" 
+          onClick={() => navigate('/')}
+        >
+          Back to Notes
+        </Button>
+      </div>
     </Container>
   );
 }

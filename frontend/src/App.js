@@ -5,6 +5,7 @@ import EditNotePage from './pages/EditNotePage';
 import AddNotePage from './pages/AddNotePage';
 import 'react-quill/dist/quill.snow.css';
 import './styles/quill.css';
+import './styles/global.css';
 
 export default function App() {
   return (

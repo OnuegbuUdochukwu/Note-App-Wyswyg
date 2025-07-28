@@ -6,20 +6,33 @@ import styled from 'styled-components';
 const EditorContainer = styled.div`
   .quill {
     border-radius: 8px;
-    border: 1.5px solid #acccc4;
+    border: 1.5px solid var(--border-color);
+    transition: border-color 0.2s;
+    
+    &:focus-within {
+      border-color: var(--primary);
+    }
     
     .ql-toolbar {
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
-      border-bottom: 1.5px solid #acccc4;
-      background-color: #f7fafc;
+      border-bottom: 1.5px solid var(--border-color);
+      background-color: var(--light-bg);
+      padding: 10px;
     }
     
     .ql-container {
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
-      min-height: 120px;
+      min-height: 200px;
       font-size: 1.1rem;
+    }
+    
+    .ql-editor {
+      min-height: 200px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--dark-text);
     }
   }
 `;
