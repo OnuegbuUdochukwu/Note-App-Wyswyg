@@ -1,0 +1,60 @@
+/* Additional Quill Editor Styles */
+
+/* Make sure the editor content is properly displayed in read-only mode */
+.ql-editor p {
+  margin-bottom: 0.5em;
+}
+
+/* Style for lists in read-only mode */
+.ql-editor ul, .ql-editor ol {
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Style for blockquotes in read-only mode */
+.ql-editor blockquote {
+  border-left: 4px solid #ccc;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  padding-left: 16px;
+}
+
+/* Style for code blocks in read-only mode */
+.ql-editor pre {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-bottom: 0.5em;
+}
+
+/* Style for images in read-only mode */
+.ql-editor img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.5em 0;
+}
+
+/* Style for links in read-only mode */
+.ql-editor a {
+  color: #42b8e0;
+  text-decoration: underline;
+}
+
+/* Style for headers in read-only mode */
+.ql-editor h1, .ql-editor h2, .ql-editor h3 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #2b5561;
+}
+
+.ql-editor h1 {
+  font-size: 1.8em;
+}
+
+.ql-editor h2 {
+  font-size: 1.5em;
+}
+
+.ql-editor h3 {
+  font-size: 1.3em;
+}
