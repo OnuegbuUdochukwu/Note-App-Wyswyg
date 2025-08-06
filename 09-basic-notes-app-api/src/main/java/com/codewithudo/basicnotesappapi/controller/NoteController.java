@@ -23,6 +23,10 @@ public class NoteController {
         return new ResponseEntity<>(noteService.getAllNotes(),  HttpStatus.OK) ;
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "Backend is running 🚀";
+    }
     @GetMapping("/{id}")
     public ResponseEntity<Note> getNoteById(@PathVariable int id) {
         Note foundNote = noteService.getNoteById(id);
