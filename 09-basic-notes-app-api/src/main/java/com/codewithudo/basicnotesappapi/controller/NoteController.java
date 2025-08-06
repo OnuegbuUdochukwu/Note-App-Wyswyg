@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:10001", "http://localhost:10002"})
+@CrossOrigin(origins = {"http://localhost:10001", "http://localhost:10002", "https://note-app-wyswyg-frontend.vercel.app/"})
 @RequestMapping("/api/notes")
 public class NoteController {
 
